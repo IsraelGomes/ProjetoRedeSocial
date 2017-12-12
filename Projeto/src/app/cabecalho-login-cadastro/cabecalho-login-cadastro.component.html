@@ -1,0 +1,9 @@
+<header class="deep-blue accent-2">
+    <h1 id="id_NossaRede">Nossa Rede</h1>
+    <form action="">
+        <input type="submit" id="id_Button_Login" [value]="buttonName" (click)="alterarEstado()"/>
+    </form>
+
+</header>
+<login *ngIf="buttonName == 'Cadastrar'">Carregando...</login>
+<cadastrar *ngIf="buttonName == 'Logar'">Carregando...</cadastrar>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Meu Formulário</title>
+
+    <meta charset="UTF-8" />
+    <meta name="author" content="Israel Gomes de Lima" />
+    <meta name="description" content="Criando um formulário em HTML" />
+    <meta name="keywords" content="formulários em html, html, input, checkbox, radio" />
+    <link rel="stylesheet" type="text/css" href="CSS/cabecalho.css" />
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <link rel="shortcut icon" href="https://vignette1.wikia.nocookie.net/harrypotter/images/2/23/Hallows.png/revision/latest?cb=20090309113642">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/css.css" />
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <form action="login.html">
+            <input type="submit" id="id_Button_Login" value="Login" />
+        </form>
+
+    </header>
+
+    <h1 id="id_Titulo_Cadastrar_Usuario">Cadastrar Usuário</h1>
+
+    <section id="id_Cadastrar">
+
+
+        <form action="index.html" method="post" id="id_Form_Cadastro">
+            <label for="id_Nome" class="nomes_cadastro">Nome</label>
+            <br/>
+            <input type="text" name="nome" placeholder="Nome" id="id_Nome" checked>
+            <input type="text" name="Sobrenome" placeholder="Sobrenome" id="id_Sobrenome" checked>
+
+            <label for="id_Email" class="nomes_cadastro">Email</label>
+            <input type="email" name="email" id="id_Email" />
+
+            <label for="id_Senha" class="nomes_cadastro">Senho</label>
+            <input type="password" name="senha" id="id_Senha">
+
+            <div id="id_Data_Nascimento">
+                <label for="id_Data" class="nomes_cadastro">Data de Nascimento</label>
+                <input type="date" name="senha" id="id_Data">
+            </div>
+
+            <div id="id_Sexo">
+                <label for="id_Sexo" class="nomes_cadastro">Sexo</label>
+                <br/>
+
+                <input name="sexo" type="radio" id="sexo1" />
+                <label for="sexo1">Masculino:</label>
+                <input name="sexo" type="radio" id="sexo2" />
+                <label for="sexo2">Feminino:</label>
+
+            </div>
+
+            <input type="submit" name="enviar" value="Enviar" id="id_Button_Cadastrar">
+
+        </form>
+    </section>
+
+    <footer>
+        fdfdfd
+    </footer>
+
+</html>

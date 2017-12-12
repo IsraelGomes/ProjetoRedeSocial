@@ -1,0 +1,53 @@
+﻿h1, h2{
+	font-size: x-large;
+}
+
+.page-title{
+	font-size: xx-large;
+}
+
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
+
+.imgcasa{
+    width: 200px;
+    height: 221px;
+}
+
+.hp {
+    width: 250px;
+    height: 300px;
+}
+
+.ron {
+    width: 350px;
+    height: 300px;
+}
+
+.hog {
+    width: 350px;
+    height: 300px;
+	padding: 10px;
+}
+
+.jk {
+    width: 450px;
+    height: 380px;
+	padding: 10px;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+main {
+    flex: 1 0 auto;
+}
+
+.espesq{
+	padding-left: 30px;
+}
