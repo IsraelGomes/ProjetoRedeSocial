@@ -10,6 +10,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { BoxPopapErroLoginComponent } from './box-popap-erro-login/box-popap-erro-login.component';
 import { BoxPopapErroCadastroComponent } from './box-popap-erro-cadastro/box-popap-erro-cadastro.component';
 import { CarregandoComponent } from './carregando/carregando.component';
+import { TelaPrincipalComponent } from './tela-principal/tela-principal.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CarregandoComponent } from './carregando/carregando.component';
     BoxPopapErroLoginComponent,
     BoxPopapErroCadastroComponent,
     CarregandoComponent,
+    TelaPrincipalComponent,
   ],
   imports: [
     BrowserModule,

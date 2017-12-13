@@ -23,44 +23,57 @@
 
 <body>
   <header id="id_CabecalhoPrincipal">
-    <form action="Cadastro.html">
-      <input type="submit" id="id_Button_Login" value="Sair" (click)="alert('huhuh)'" />
+    <h1 id="id_NossaRedePrincipal">Nossa Rede</h1>
+    <form action="Cadastro.html" id="id_form_pesquisa">
+      <input placeholder="Pesquisar" id="id_CaixaPesquisa" type="search" class="validate">
+      <input type="submit" id="id_Button_Pesquisar" value="search" (click)="alert('huhuh)'" />
     </form>
+
+    <input type="submit" id="id_Button_Login" value="Sair" (click)="alert('huhuh)'" />
   </header>
 
 
 
   <main id="id_PaginaPrincipal">
     <section id="id_SectionUsuario">
-      fdfdfd4646556
+      <table id="id_TableUser">
+        <tr><td id="id_Perfil" rowspan="3"><img src="favicon.ico" id="id_IMGPerfil"></td><td>Nome: </td></tr>
+        <tr><td>Idade: </td></tr>
+        <tr><td>Sexo: </td></tr>
+      </table>
     </section>
 
-    <section id="id_SectionConteudo">
-      <form id="id_publicarPoster">
-        <textarea>
-          fdfd
-        </textarea>
+    <section id="id_FazerPostagem">
+      <h1 id="id_CriarPostagem">Criar Novo Poster</h1>
+      <form class="col s12">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Textarea</label>
+        </div>
+
         <input type="submit" value="Publicar" />
       </form>
+    </section>
+    <section>
 
       <div class="row">
-          <div class="col s12 m7">
-            <div class="card">
-              <div class="card-image">
-               
-                <span class="card-title">Card Title</span>
-              </div>
-              <div class="card-content">
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image">
+
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
               <img src="favicon.ico">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-              </div>
-              <div class="card-action">
-                Nome: isashdad Data: 2017/12/11 16:56
-              </div>
+              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
+                little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+              Nome: isashdad Data: 2017/12/11 16:56
             </div>
           </div>
         </div>
+      </div>
 
 
     </section>

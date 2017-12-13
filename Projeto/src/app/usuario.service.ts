@@ -3,15 +3,24 @@ import { Usuario } from 'app/usuario';
 import { BoxPopapErroLoginComponent } from 'app/box-popap-erro-login/box-popap-erro-login.component';
 import { BoxPopapErroCadastroComponent } from 'app/box-popap-erro-cadastro/box-popap-erro-cadastro.component';
 import { delay } from 'q';
+import { Poster } from 'app/poster';
 
 @Injectable()
 export class UsuarioService {
   static usuarios: Array<Usuario> = new Array();
   static deslogado = true;
   static carregando = false;
+  static usuarioLogado: Usuario;
 
   constructor() { }
 
+
+  static postar(conteudo: string){
+    let post: Poster = new Poster();
+    post.setConteudo(conteudo);
+    post.setAutor(UsuarioService.usuarioLogado.getNome());
+    UsuarioService.usuarioLogado.addPoster(post);
+  }
 
   logar(email: string, senha: string){
     let contem: boolean = false;
@@ -19,8 +28,7 @@ export class UsuarioService {
 
     for (let user = 0; user < UsuarioService.usuarios.length; user++) {
       if (UsuarioService.usuarios[user].getEmail() == email && UsuarioService.usuarios[user].getSenha() == senha) {
-        alert("Logado com sucesso");
-
+        UsuarioService.usuarioLogado = UsuarioService.usuarios[user];
         UsuarioService.deslogado = false;
         contem = true;
         break;
