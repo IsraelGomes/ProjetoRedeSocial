@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { CabecalhoLoginCadastroComponent } from './cabecalho-login-cadastro/cabecalho-login-cadastro.component';
@@ -11,6 +10,7 @@ import { BoxPopapErroLoginComponent } from './box-popap-erro-login/box-popap-err
 import { BoxPopapErroCadastroComponent } from './box-popap-erro-cadastro/box-popap-erro-cadastro.component';
 import { CarregandoComponent } from './carregando/carregando.component';
 import { TelaPrincipalComponent } from './tela-principal/tela-principal.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { TelaPrincipalComponent } from './tela-principal/tela-principal.componen
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

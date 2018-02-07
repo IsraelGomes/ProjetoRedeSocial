@@ -4,6 +4,7 @@ import { BoxPopapErroLoginComponent } from 'app/box-popap-erro-login/box-popap-e
 import { BoxPopapErroCadastroComponent } from 'app/box-popap-erro-cadastro/box-popap-erro-cadastro.component';
 import { delay } from 'q';
 import { Poster } from 'app/poster';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class UsuarioService {
@@ -11,18 +12,19 @@ export class UsuarioService {
   static deslogado = true;
   static carregando = false;
   static usuarioLogado: Usuario;
+  apiUsuarios = 'http://localhost:3000/usuarios';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
 
-  static postar(conteudo: string){
+  static postar(conteudo: string) {
     let post: Poster = new Poster();
     post.setConteudo(conteudo);
     post.setAutor(UsuarioService.usuarioLogado.getNome());
     UsuarioService.usuarioLogado.addPoster(post);
   }
 
-  logar(email: string, senha: string){
+  logar(email: string, senha: string) {
     let contem: boolean = false;
     UsuarioService.carregando = true;
 
@@ -35,15 +37,24 @@ export class UsuarioService {
       }
     }
 
-    if(contem == false){
+    if (contem == false) {
 
-    UsuarioService.carregando = false;
+      UsuarioService.carregando = false;
       BoxPopapErroLoginComponent.abrir();
     }
   }
   adicionar(usuario: Usuario): void {
 
-    let contem: boolean = false;
+    this.http.post(this.apiUsuarios, usuario).subscribe(
+      ok => {
+        console.log('Cadastrado com sucesso');
+      },
+      erro => {
+        console.log('Erro no cadastro: ' + erro.toString());
+      }
+    );
+
+    /*let contem: boolean = false;
     if (UsuarioService.usuarios.length == 0) {
       UsuarioService.usuarios.push(usuario);
     }
@@ -57,9 +68,9 @@ export class UsuarioService {
         }
       }
 
-      if(contem == false){
+      if (contem == false) {
         UsuarioService.usuarios.push(usuario);
       }
-    }
+    }*/
   }
 }
