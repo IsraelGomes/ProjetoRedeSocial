@@ -1,0 +1,48 @@
+#id_form_pesquisa{
+    position: relative;
+    width: 65px;
+    height: 60px;
+    margin: 0 auto;
+    -webkit-transition: 0.5s;
+}
+
+#id_form_pesquisa:hover{
+    position: relative;
+    width: 350px;
+    height: 60px;
+    margin: 0 auto;
+    -webkit-transition: 0.5s;
+}
+
+#id_form_pesquisa:hover > #id_img_search{
+    position: absolute;
+    right: 0%;
+    width: 60px;
+    padding-left: 20px;
+    -webkit-transition: 0.5s;
+}
+
+#id_form_pesquisa:hover > #id_CaixaPesquisa{
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    width: 280px;
+    left: 5px;
+    -webkit-transition: 0.5s;
+    background-color: white;
+}
+
+
+#id_img_search{
+    position: relative;
+    width: 60px;
+    -webkit-transition: 0.5s;
+}
+
+#id_CaixaPesquisa{
+    position: relative;
+    display: inline-block;
+    width: 0px;
+    height: 45px;
+    -webkit-transition: 0.5s;
+}

@@ -1,0 +1,279 @@
+.perfil{
+    width: 100%;
+    margin-top: 5px;
+}
+
+#id_ConteudoUsuario{
+    width: 100%;
+	padding-top: 0px;
+	padding-bottom: 0px;
+
+    height: max-content;
+
+    position: relative;
+  
+
+    box-shadow: 0px 0px 10px black;
+}
+
+#id_Infor{
+	width: 100%;
+margin-top: 0px;
+	margin-bottom: 0px;
+overflow-x: scroll;
+}
+
+
+#id_popap_perfil{
+    display: block;
+    position: fixed;
+    width: 1px;
+    height: 100%;
+    background-color: white;
+    z-index: 3;
+
+    -webkit-transition: 0.5s;
+}
+
+
+#id_popap_perfil:hover > div{
+    display: block;
+    position: absolute;
+    width: 100%;
+
+    -webkit-transition: 0.5s;
+}
+
+#id_popap_perfil:hover{
+    display: block;
+    position: fixed;
+    width: 380px;
+    height: 100%;
+    background-color: gainsboro;
+    z-index: 3;
+
+    overflow: auto;
+    -webkit-transition: 0.5s;
+}
+
+#id_popap_perfil div{
+    display: none;
+    position: relative;
+    width: 100%;
+
+    -webkit-transition: 0.5s;
+}
+
+
+#id_sair_button{
+    position: absolute;
+    right: 50px;
+    top: 500px;
+    width: 90px;
+    height: 40px;
+
+    background-color: SteelBlue;
+    display: inline-block;
+    text-align: center;
+    padding-top: 8px;
+    border-radius: 8px 8px 8px 8px;
+
+    text-decoration: none;
+    color: black;
+}
+
+#id_sair_button:hover{
+    position: absolute;
+    right: 50px;
+    top: 500px;
+    width: 90px;
+    height: 40px;
+
+    background-color: rgba(70,130,180, 0.8);
+    display: inline-block;
+    text-align: center;
+    padding-top: 8px;
+    border-radius: 8px 8px 8px 8px;
+    -webkit-transition: 0.5s;
+    box-shadow: 0px 0px 10px black;
+
+    text-decoration: none;
+    color: black;
+}
+
+#id_sair_button:active{
+    position: absolute;
+    right: 50px;
+    top: 500px;
+    width: 90px;
+    height: 40px;
+
+    background-color: SteelBlue;
+    display: inline-block;
+    text-align: center;
+    padding-top: 8px;
+    border-radius: 8px 8px 8px 8px;
+
+    text-decoration: none;
+    color: black;
+}
+
+#id_minhaconta_button{
+    position: absolute;
+    right: 210px;
+    top: 500px;
+    width: 130px;
+    height: 40px;
+
+    background-color: SteelBlue;
+    display: inline-block;
+    text-align: center;
+    padding-top: 8px;
+    border-radius: 8px 8px 8px 8px;
+
+    text-decoration: none;
+    color: black;
+}
+
+#id_minhaconta_button:hover{
+    position: absolute;
+    right: 210px;
+    top: 500px;
+    width: 130px;
+    height: 40px;
+
+    background-color: rgba(70,130,180, 0.8);
+    display: inline-block;
+    text-align: center;
+    padding-top: 8px;
+    border-radius: 8px 8px 8px 8px;
+    -webkit-transition: 0.5s;
+    box-shadow: 0px 0px 25px black;
+
+    text-decoration: none;
+    color: black;
+}
+
+#id_minhaconta_button:active{
+    position: absolute;
+    right: 210px;
+    top: 500px;
+    width: 130px;
+    height: 40px;
+
+    background-color: SteelBlue;
+    display: inline-block;
+    text-align: center;
+    padding-top: 8px;
+    border-radius: 8px 8px 8px 8px;
+
+    text-decoration: none;
+    color: black;
+}
+
+#id_img_mensagem{
+    width: 100%;
+}
+
+#id_mensagem{
+    position: absolute;
+    right: 95px;
+    top: 40px;
+
+    width: 35px;
+}
+
+#id_mensagem:hover{
+    position: absolute;
+    right: 90px;
+    top: 40px;
+
+    width: 45px;
+    z-index: 3
+}
+
+#id_img_notificacao{
+    width: 100%;
+}
+
+#id_notificacao{
+    position: absolute;
+    right: 55px;
+    top: 40px;
+
+    width: 35px;
+}
+
+#id_notificacao:hover{
+    position: absolute;
+    right: 50px;
+    top: 40px;
+
+    width: 45px;
+    z-index: 3
+}
+
+
+#id_img_perfil{
+    width: 100%;
+}
+
+
+#id_perfil{
+    position: absolute;
+    right: 95px;
+    top: 80px;
+
+    width: 200px;
+}
+#id_perfil:hover{
+    position: absolute;
+    right: 95px;
+    top: 80px;
+    box-shadow: 0px 0px 5px black;
+
+    width: 200px;
+}
+
+#id_informacoes{
+    position: absolute;
+    right: 45px;
+    top: 290px;
+    width: 300px;
+}
+
+.informacoes{
+    background-color: LightGray;
+    display: block;
+    width: 100%;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+
+    margin-top: 0px;
+
+    border-bottom: solid DarkGrey;
+
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.informacoes:hover{
+    background-color: rgb(181, 181, 181);
+    display: block;
+    width: 100%;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+
+    margin-top: 0px;
+
+    border-bottom: solid DarkGrey;
+
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
