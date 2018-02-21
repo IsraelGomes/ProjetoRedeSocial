@@ -1,2 +1,5 @@
-<!--<router-outlet></router-outlet>-->
-<home-pt></home-pt>
+
+<home-pt *ngIf="logado() == true && getIdiomaPortugues()">portugues</home-pt>
+<home-jp *ngIf="logado() == true && getIdiomaJapones()">Japones</home-jp>
+<router-outlet *ngIf="logado() == false"></router-outlet>
+

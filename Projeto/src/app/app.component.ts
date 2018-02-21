@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsuarioService } from './Aplicacao/Usuario/usuario.service';
 
 @Component({
   selector: 'app-root',
@@ -6,67 +7,42 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Listagem de Pessoasng';
-}
+  static idioma: string;
+  portugues: string;
+  japones: string;
+  ingles: string;
+  espanho: string;
 
-export class Usuario{
+  constructor(private usuarioService: UsuarioService) {
 
-  nome: string;
-  sobreNome: string;
-  dataNascimento: String;
-  idioma: string;
-  email: string;
-  senha: string;
-  endereco: string;
-  telefone: string;
+    this.portugues = "portugues";
+    this.japones = "nihongo";
+    this.espanho = "espanhol";
+    this.ingles = "english";
 
-  amigos:  Usuario[];
-  mesagem: Msm[];
-  novasMensagens: Msm[];
-  notificacoes: string[];
-
-  public set Post(postagem: string){
+    usuarioService.loginAutomatico();
 
   }
+  logado(): boolean {
+    return UsuarioService.logado;
+  }
+  getIdiomaPortugues(): boolean
+  {
 
-  public set EnviMensagem(enviar: string){
+    if (UsuarioService.logado == true) {
+      AppComponent.idioma = UsuarioService.usuarioLogado.idioma;
+    }
 
+  return (AppComponent.idioma == this.portugues);
   }
 
-}
+  getIdiomaJapones(): boolean
+  {
 
-// classe mesnsagem
+    if (UsuarioService.logado == true) {
+      AppComponent.idioma = UsuarioService.usuarioLogado.idioma;
+    }
 
-export class Msm{
-
-  texto: string;
-  //data: date;  não possui o tipo data ????
-  nomeUsr: string;
-
-}
-
-// classe postagens
-
-export class Post{
-
-  texto: string;
-  //data: data;
-  tipoPost: string;
-  nomeUsr: string;
-
-
-}
-
-//classe usuarioService
-
-export class usuarioServ{
-
-  public set cadastrarUrs(cadastrar: string){
-
-  }
-
-  public set login(logar: string){
-
-
+  return (AppComponent.idioma == this.japones);
   }
 }

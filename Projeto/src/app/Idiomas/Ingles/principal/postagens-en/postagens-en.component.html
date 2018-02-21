@@ -1,0 +1,28 @@
+
+  <section id="id_ConteudoPrincipal">
+    <section id="id_FazerPostagem">
+      <h1 id="id_CriarPostagem">Criar Novo Poster</h1>
+        <div class="input-field col s12" id="id_CaixaTexto">
+          <textarea id="textarea1"  #valorInput="ngModel" [(ngModel)]="conteudo"></textarea>
+          <label for="textarea1">Publique o que está pensando...</label>
+        </div>
+        <input type="submit" value="Publicar" id="id_ButtomPublicar" (click) = "postar(valorInput.value)"/>
+    </section>
+
+    <section id="id_ConteudoPostado" *ngFor="let postagem of getPosters()">
+
+      <div class="card">
+        <div class="card-content">
+          <div class="chip">
+            <img src="9.jpg"alt="Contact Person">
+            <b>{{postagem.nomeUsr}}</b>
+          </div>
+          <p>{{postagem.texto}}</p>
+        </div>
+        <div class="card-action">
+          Postado em: {{postagem.data}}
+
+        </div>
+      </div>
+    </section>
+  </section>

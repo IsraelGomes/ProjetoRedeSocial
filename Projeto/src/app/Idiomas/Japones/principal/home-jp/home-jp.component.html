@@ -1,0 +1,18 @@
+<menu-popap-perfil-jp></menu-popap-perfil-jp>
+
+
+<header id="id_CabecalhoPrincipal">
+  <h1 id="id_NossaRedePrincipal">Nossa Rede</h1>
+  <pesquisa-pessoas></pesquisa-pessoas>
+</header>
+
+
+
+<main id="id_PaginaPrincipal">
+  <section id="id_amigos_online">
+    <amigos-online></amigos-online>
+  </section>
+
+<postagens  *ngIf="getTypePagina() == 'postagens'"></postagens>
+<minha-conta-jp  *ngIf="getTypePagina() == 'minha-conta'"></minha-conta-jp>
+</main>

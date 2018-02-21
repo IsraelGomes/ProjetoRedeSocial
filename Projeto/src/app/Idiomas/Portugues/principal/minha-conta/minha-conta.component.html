@@ -1,0 +1,43 @@
+<section id="id_ConteudoPrincipal">
+  <section id="id_FazerPostagem">
+    <h1 id="id_AtualizarConta">Minha Conta</h1>
+  </section>
+
+  <section id="id_ConteudoPrincipal">
+
+
+    <form (ngSubmit)="atualizar()" id="id_Form_Cadastro" #formulario="ngForm">
+      <label for="id_Nome" class="nomes_cadastro">Nome</label>
+      <br/>
+      <input type="text" name="nome" placeholder="Nome" id="id_Nome" #nomeUsuario="ngModel" [(ngModel)]="nome" required>
+      <input type="text" name="sobrenome" placeholder="Sobrenome" id="id_Sobrenome" #sobrenomeUsuario="ngModel" [(ngModel)]="sobrenome"
+        required>
+
+      <label for="id_Email" class="nomes_cadastro">Email</label>
+      <input type="email" name="email" id="id_Email" #emailUsuario="ngModel" [(ngModel)]="email" required>
+
+      <label for="id_Senha" class="nomes_cadastro">Senha</label>
+      <input type="password" name="senha" id="id_Senha" #senhaUsuario="ngModel" [(ngModel)]="senha" required>
+
+
+
+
+      <label for="id_Endereco" class="nomes_cadastro">Endereço</label>
+      <input type="text" name="endereco" id="id_Endereco" #enderecoUsuario="ngModel" [(ngModel)]="endereco">
+
+      <label for="id_Telefone" class="nomes_cadastro">Telefone</label>
+      <input type="text" name="telefone" id="id_Telefone" #telefoneUsuario="ngModel" [(ngModel)]="telefone">
+
+      <label for="id_Idioma" class="nomes_cadastro">Idiomas</label>
+      <select id="id_Idioma" class="nomes_cadastro" name="Idiomas" [(ngModel)]="idioma">
+        <option value="portugues">Portugues</option>
+        <option value="english">Inglês</option>
+        <option value="espanol">Espanhol</option>
+        <option value="nihongo">Japonês</option>
+      </select>
+      <div>
+        <a href="home.pt" class="login_button">Cencelar</a>
+        <input type="submit" name="enviar" value="Salvar" class="login_button" onClick="windows.location('pagina')">
+      </div>
+    </form>
+  </section>

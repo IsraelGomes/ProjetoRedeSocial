@@ -1,0 +1,31 @@
+<header class="deep-blue accent-2">
+  <h1 id="id_NossaRede">Nossa Rede</h1>
+  <form action="">
+      <a href="cadastrar.jp" id="id_cadastrar_button">登録する</a>
+  </form>
+
+</header>
+<section id="id_Login">
+  <h1 id="id_Titulo_Logar_Usuario">ログイン</h1>
+  <form id="id_Form_Login">
+    <div class="input-field col s6">
+      <input type="email" name="nome" [(ngModel)]="email" required>
+      <label>メール:</label>
+    </div>
+
+    <div class="input-field col s6">
+      <input type="password" name="senha" [(ngModel)]="senha" required>
+      <label>パスワード:</label>
+    </div>
+    <a href="index.html">パスワードを忘れますか?</a>
+    <input type="submit" name="logar" value="ログイン" id="id_Button_Logar" (click)="logar()">
+  </form>
+</section>
+
+<p *ngIf="logado==false" id="id_erro_login">
+ログインまたはパスワードが正しくない
+</p>
+<footer>
+  © 2014 Copyright Text
+
+</footer>

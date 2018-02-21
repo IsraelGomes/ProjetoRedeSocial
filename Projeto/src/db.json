@@ -1,0 +1,26 @@
+{
+  "usuarios": [
+    {
+      "nome": "Israel",
+      "senha": "Senha",
+      "id": 1
+    },
+    {
+      "nome": "Israel",
+      "senha": "Senha",
+      "id": 2
+    },
+    {
+      "nome": "Israel",
+      "senha": "Senha",
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "posters": [],
+      "id": 5
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+#id_CriarPostagem{
+    width: 100%;
+    height: 50px;
+
+    background-color: blue;
+
+    margin-top: 0px;
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+}
+#id_ConteudoPrincipal{
+    width: 54%;
+    height: 800px;
+
+    top: 10px;
+    position: relative;
+	margin: 0 auto;
+
+    z-index: 0;
+}
+
+#id_ConteudoPostado{
+    width: 100%;
+    height: max-content;
+
+
+
+    position: relative;
+
+    float: left;
+
+    background-color: white;
+
+	margin-top: 20px;
+}
+
+#id_FazerPostagem{
+    width: 100%;
+    height: 280px;
+
+
+    position: relative;
+
+    float: left;
+
+    background-color: white;
+    box-shadow: 0px 0px 10px black;
+}
+
+#id_ButtomPublicar{
+	position: absolute;
+	right: 0px
+}
+
+#textarea1{
+    width: 100%;
+    height: 160px;
+    overflow-y: auto;
+    resize: none;
+
+    border-radius: 5px 5px 5px 5px;
+    margin-top: 10px;
+}
+#id_CaixaTexto{
+
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+}
+
+

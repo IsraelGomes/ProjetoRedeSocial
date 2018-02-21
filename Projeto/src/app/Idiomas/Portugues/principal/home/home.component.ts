@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  static pagina: string;
+  constructor() {
+    HomeComponent.pagina = "postagens";
+  }
 
   ngOnInit() {
   }
 
+  getTypePagina(): string{
+    return HomeComponent.pagina;
+  }
+
+  setTypePagina(typePage: string){
+    HomeComponent.pagina = typePage;
+  }
 }

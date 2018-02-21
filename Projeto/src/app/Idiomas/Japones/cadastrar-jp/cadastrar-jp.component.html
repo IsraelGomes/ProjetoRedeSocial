@@ -1,0 +1,48 @@
+<header class="deep-blue accent-2">
+  <h1 id="id_NossaRede">Nossa Rede</h1>
+  <form action="">
+    <a href="login.jp" id="id_login_button">ログイン</a>
+  </form>
+
+</header>
+<h1 id="id_Titulo_Cadastrar_Usuario">ユーザーを登録する</h1>
+
+<section id="id_Cadastrar">
+
+
+  <form (ngSubmit)="cadastrar()" id="id_Form_Cadastro" #formulario="ngForm">
+    <label for="id_Nome" class="nomes_cadastro">名前</label>
+    <br/>
+    <input type="text" name="nome" placeholder="名" id="id_Nome" #nomeUsuario="ngModel" [(ngModel)]="nome" required>
+    <input type="text" name="sobrenome" placeholder="姓" id="id_Sobrenome" #sobrenomeUsuario="ngModel" [(ngModel)]="sobrenome"
+      required>
+
+    <label for="id_Email" class="nomes_cadastro">メール</label>
+    <input type="email" name="email" id="id_Email" #emailUsuario="ngModel" [(ngModel)]="email" required>
+
+    <label for="id_Senha" class="nomes_cadastro">パスワード</label>
+    <input type="password" name="senha" id="id_Senha" #senhaUsuario="ngModel" [(ngModel)]="senha" required>
+
+    <div id="id_Data_Nascimento">
+      <label for="id_Data" class="nomes_cadastro">誕生日</label>
+      <input type="date" name="dataNascimento" id="id_Data" #dataNascimentoUsuario="ngModel" [(ngModel)]="dataNascimento" required>
+    </div>
+
+    <div id="id_Sexo">
+      <label for="id_Sexo" class="nomes_cadastro">性別</label>
+      <br/>
+
+      <input name="sexo" type="radio" id="sexo1" value="Masculino" #sexo1Usuario="ngModel" [(ngModel)]="sexo" required>
+      <label for="sexo1">男性:</label>
+      <input name="sexo" type="radio" id="sexo2" value="Feminino" #sexo2Usuario="ngModel" [(ngModel)]="sexo" required>
+      <label for="sexo2">女性:</label>
+    </div>
+
+    <input type="submit" name="enviar" value="登録する" id="id_Button_Cadastrar" onClick="windows.location('pagina')">
+  </form>
+</section>
+
+<footer>
+  © 2014 Copyright Text
+
+</footer>
