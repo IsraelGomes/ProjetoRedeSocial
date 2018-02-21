@@ -1,12 +1,12 @@
 
   <section id="id_ConteudoPrincipal">
     <section id="id_FazerPostagem">
-      <h1 id="id_CriarPostagem">Criar Novo Poster</h1>
+      <h1 id="id_CriarPostagem">新しいポスターを作成する</h1>
         <div class="input-field col s12" id="id_CaixaTexto">
           <textarea id="textarea1"  #valorInput="ngModel" [(ngModel)]="conteudo"></textarea>
-          <label for="textarea1">Publique o que está pensando...</label>
+          <label for="textarea1">あなたが思っていることを投稿してください...</label>
         </div>
-        <input type="submit" value="Publicar" id="id_ButtomPublicar" (click) = "postar(valorInput.value)"/>
+        <input type="submit" value="シェア" id="id_ButtomPublicar" (click) = "postar(valorInput.value)"/>
     </section>
 
     <section id="id_ConteudoPostado" *ngFor="let postagem of getPosters()">

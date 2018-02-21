@@ -136,7 +136,7 @@ export class UsuarioService {
 
       },
       erroAoCadastrar => {
-        alert("Ocorreu um erro interno");
+
       }
       );
   }
